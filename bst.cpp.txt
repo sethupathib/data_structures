@@ -1,0 +1,199 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+//BINARY SEARCH TREE IMPLEMENTATION USING RECURSION
+
+//write 3 functions
+//getNode --> Here, root is becoming global. Hence, pointer to pointer is not used.
+//insert
+//search
+
+class BstNode {
+	public:
+	int data;
+	BstNode* left;
+	BstNode* right;
+};
+
+BstNode* getNode(int new_data)
+{
+	BstNode* new_node = new BstNode();
+	new_node->data = new_data;
+	new_node->left=new_node->right=NULL;
+	return new_node;
+	}
+
+BstNode* Insert(BstNode* root,int new_data)
+{
+	if (root==NULL)
+	{
+		root = getNode(new_data);
+				
+	}
+
+	else if(new_data<=root->data)
+	{
+		root->left = Insert(root->left,new_data);
+		}
+	else
+	{
+		root->right = Insert(root->right,new_data);
+		}
+
+	
+	//cout<<root->data<<"\t ";
+	return root;
+
+	
+	}
+bool Search (BstNode* root,int data)
+{
+	if(root==NULL) 
+		{
+			return false;
+		}
+		
+	if(root->data==data)
+	{
+		return true;
+		}
+
+	else if (data<=root->data)
+	{
+		return Search(root->left,data);
+		}
+
+	else
+		return Search(root->right,data);
+	}
+
+//finding the smallest element in the BST
+int findSmall(BstNode* root)
+{
+	BstNode* current = root;
+	if(current==NULL)
+		{
+		cout<<"No element in the BST";
+		return -1;
+		}
+
+	while(current->left!=NULL)
+	{
+		current=current->left;
+		
+		}
+		return current->data;
+	}
+
+//finding the largest element in the BST
+int findLarge(BstNode* root)
+{
+	BstNode* current = root;
+	if(current==NULL)
+		{
+		cout<<"No element in the BST";
+		return -1;
+		}
+
+	while(current->right!=NULL)
+	{
+		current=current->right;
+		
+		}
+		return current->data;
+	}
+/*
+
+Finding Largest using recursion
+
+findLarge(Node *root)
+{
+	BstNode* current = root;
+	if(current==NULL)
+		{
+		cout<<"No element in the BST";
+		return -1;
+		}
+
+	else if (current->right==NULL)
+	{
+
+	return current->data;
+		}
+
+		return findLarge(current->right);
+	}
+*/
+
+//function to return the maximum of two numbers
+//int max(int left,int right)
+//{
+//	if(left>right)
+//		return left;
+//
+//		return right;
+//	}
+
+//int findHeight(BstNode* root)
+//{
+//	int leftHeight, rightHeight,maxHeight;
+//	if(root==NULL)
+//		return -1;
+//
+//		else{
+//	
+//	leftHeight = findHeight(root->left);
+//	rightHeight = findHeight(root->right);
+//		}
+//
+//
+//	if(leftHeight>rightHeight)
+//		maxHeight = leftHeight+1;
+//		else
+//			maxHeight = rightHeight+1;
+//	
+////	cout<<leftHeight<<"\t"<<rightHeight;
+//	
+//	return maxHeight;
+//
+//}
+
+
+int findHeight(BstNode* root)
+{
+	if(root==NULL)
+		return -1;
+		return max(findHeight(root->left),findHeight(root->right))+1;
+		}
+
+
+
+	int main()
+
+	{
+		BstNode* root = NULL;
+		root = Insert(root,1);
+		root = Insert(root,2);
+		root = Insert(root,3);
+		root = Insert(root,4);
+		root = Insert(root,5);
+	cout<<"enter the number to be searched in the BST "<<endl;
+	int n;
+	//cin>>n;
+	//if(Search(root,n)== true) cout<<"No. available";
+	//else cout<<"No. not available";
+	cout<<"\n";
+	cout<<"Smallest Element in the BST is "<<findSmall(root)<<endl;
+	cout<<"Largest Element in the BST is "<<findLarge(root)<<endl;
+	cout<<"Height of the Binary Search Tree is  "<<findHeight(root)<<endl;
+	
+	
+
+	return 0;
+		}
+
+
+
+
+
+
