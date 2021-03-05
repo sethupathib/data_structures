@@ -10,3 +10,10 @@ Data Structures and Algorithms Implementation
 6. Greedy Algorithms
 7. Dynamic Programming 
 8. Sorting and Searching (already done, but will do it in a systematic manner again)
+
+
+
+**Problems that are hard for me**
+
+1. Replace 'Pi'.
+2. 
