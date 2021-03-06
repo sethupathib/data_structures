@@ -17,3 +17,10 @@ Data Structures and Algorithms Implementation
 
 1. Replace 'Pi'.
 2. 
+
+
+
+**Revision (Must)**
+1. Quick Sort
+2. Merge Sort (Not so much, but still)
+3. All recursion problems.
