@@ -20,7 +20,9 @@ Data Structures and Algorithms Implementation
 
 
 
-**Revision (Must)**
+**Revision (Must)** 
+
+Revise from Apni Kaksha
 1. Quick Sort
 2. Merge Sort (Not so much, but still)
-3. All recursion problems.
+3. All recursion problems. (N Queen (isSafe function), Sudoku Solver)
