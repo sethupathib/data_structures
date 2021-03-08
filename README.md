@@ -28,6 +28,7 @@ Revise from Apni Kaksha
 3. All recursion problems. (N Queen (isSafe function), Sudoku Solver)
 4. Binary Search Problems (Book Allocation, Aggressive Cows etc)
 5. Dynamic Programming Problems (Coin Change)
+6. BackTracking (Rat in a Maze, N Queen, Sudoku)
 
 
 **Data-Structures that I enjoyed the most**
