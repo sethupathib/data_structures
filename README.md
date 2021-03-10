@@ -1,3 +1,4 @@
+
 # data_structures
 Data Structures and Algorithms Implementation
 
@@ -29,9 +30,15 @@ Revise from Apni Kaksha
 4. Binary Search Problems (Book Allocation, Aggressive Cows etc)
 5. Dynamic Programming Problems (Coin Change)
 6. BackTracking (Rat in a Maze, N Queen, Sudoku, Knights Tour)
+7. TSP
+8. SSSP
 
 
 **Data-Structures that I enjoyed the most**
 1. Segment Trees.
 2. Segment Trees with Lazy Propagation.
 
+
+**Expected Areas of Work**
+1. Floorplanning.
+2. Routing.
