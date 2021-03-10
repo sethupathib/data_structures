@@ -32,6 +32,7 @@ Revise from Apni Kaksha
 6. BackTracking (Rat in a Maze, N Queen, Sudoku, Knights Tour)
 7. TSP
 8. SSSP
+9. STL revision.
 
 
 **Data-Structures that I enjoyed the most**
