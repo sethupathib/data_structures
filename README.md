@@ -17,7 +17,7 @@
 **Problems that are hard for me**
 
 1. Replace 'Pi'.
-2. 
+2. Holiday Accomodation.
 
 
 
