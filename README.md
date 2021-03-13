@@ -2,7 +2,7 @@
 # data_structures
 **Data Structures and Algorithms Implementation**
 
-**I'm yet to implement the following. Will do it very soon.**
+**Topics**
 1. Priority Queue
 2. Hash Table
 3. Heaps
