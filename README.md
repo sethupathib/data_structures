@@ -41,6 +41,7 @@ Revise from Apni Kaksha
 1. Segment Trees.
 2. Segment Trees with Lazy Propagation.
 3. Graph BFS/DFS.
+4. BST Implementation.
 
 
 **Expected Areas of Work**
