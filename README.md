@@ -40,6 +40,7 @@ Revise from Apni Kaksha
 **Data-Structures that I enjoyed the most**
 1. Segment Trees.
 2. Segment Trees with Lazy Propagation.
+3. Graph BFS/DFS.
 
 
 **Expected Areas of Work**
