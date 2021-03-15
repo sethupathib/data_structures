@@ -23,22 +23,25 @@ class Graph {
         
         visited[node] = true;
         for(auto p:l){
-         T node = p.first;   
+         T node1 = p.first;   
         
         
-        if(!visited[node]){
-            visited[node] = true;
-            dfs_helper(node,visited, ordering);
+        if(!visited[node1]){
+            visited[node1] = true;
+            dfs_helper(node1,visited, ordering);
         }
-    }
-    ordering.push_front(node);
+        ordering.push_front(node1);
     return;
+    
+    }}
     
     //dfs
     
-    void dfs(){
+    void dfs() 
+    {
         
         map<T,bool> visited;
+        list<T>ordering;
         
         for(auto p:l){
             T node = p.first;
@@ -47,10 +50,10 @@ class Graph {
         
         for(auto p:l){
             
-            T node = p.first
-            if(!visited[node]){
+            T node1 = p.first;
+            if(!visited[node1]){
                 
-                dfs_helper(node,visited)
+                dfs_helper(node1,visited,ordering);
             }
         }
         
@@ -69,15 +72,13 @@ class Graph {
 
 int main(){
     
-    Graph g;
+    Graph<int> g;
     
     g.addEdge(1,2,false);
     g.addEdge(1,3,false);
     g.addEdge(2,4,false);
     g.addEdge(3,4,false);
-    
-    
-    
-    
+    g.dfs();
+
     return 0;
 }
