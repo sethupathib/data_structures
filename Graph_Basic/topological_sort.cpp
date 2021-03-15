@@ -1,84 +1,72 @@
-#include<bits/stdc++.h>
-#include <list>
-#include <algorithm>
+#include <bits/stdc++.h>
 #include <map>
-
+#include <list>
 using namespace std;
 
-template <typename T>
-class Graph {
-    map<T, list<T> > l;
-    public:
-    
-    void addEdge (int x, int y,bool bidir){
+template<typename T>
+
+class Graph{
+  map<T,list<T> > l; 
+  public:
+
+
+    void addEdge(int x, int y){
         l[x].push_back(y);
-        if(bidir){
-            l[y].push_back(x);
+        l[y].push_back(x);
+    }  
+    
+    //dfs helper
+    
+    void dfs_helper(int src, map<T,int>&visited, list<T> &ordering){
+        
+        visited[src] = true;
+        
+        for(auto p :l){
+            T node = p.first;
+            if(!visited[node]){
+                dfs_helper(node,visited,ordering);
+            }
         }
+        ordering.push_front(src);
     }
-    
-    //dfs_helper
-    
-    void dfs_helper(T node, map<T,bool> &visited, list<T> ordering){
-        
-        visited[node] = true;
-        for(auto p:l){
-         T node1 = p.first;   
-        
-        
-        if(!visited[node1]){
-            visited[node1] = true;
-            dfs_helper(node1,visited, ordering);
-        }
-        ordering.push_front(node1);
-    return;
-    
-    }}
-    
     //dfs
-    
-    void dfs() 
-    {
+    void dfs(){
+        map<T,int>visited;
+        list<T> ordering ;
         
-        map<T,bool> visited;
-        list<T>ordering;
+        //make all nodes as not visited
         
         for(auto p:l){
             T node = p.first;
-          visited[node] = false;
+            visited[node] = false;
         }
-        
         for(auto p:l){
-            
-            T node1 = p.first;
-            if(!visited[node1]){
-                
-                dfs_helper(node1,visited,ordering);
+            T nbr = p.first;
+        
+        if(!visited[nbr]){
+            dfs_helper(nbr,visited,ordering);
             }
         }
         
-        for(auto node : ordering){
-            cout<<node<<endl;
+        for(auto node: ordering){
+            cout<<node;
         }
     }
-    
     
     
 };
 
 
 
-
-
 int main(){
     
     Graph<int> g;
-    
-    g.addEdge(1,2,false);
-    g.addEdge(1,3,false);
-    g.addEdge(2,4,false);
-    g.addEdge(3,4,false);
+    g.addEdge(1,2);
+    g.addEdge(1,3);
+    g.addEdge(2,4);
+    g.addEdge(3,4);
     g.dfs();
-
+    
+    
     return 0;
 }
