@@ -16,7 +16,8 @@ class Graph{
     }  
     
     //dfs helper
-    
+    //pass visited array and ordering array by reference and not by value. 
+    //It will another copy of the array if you do not pass by reference.
     void dfs_helper(int src, map<T,int>&visited, list<T> &ordering){
         
         visited[src] = true;
