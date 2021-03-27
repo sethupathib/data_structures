@@ -12,7 +12,7 @@ class Graph{
 
     void addEdge(int x, int y){
         l[x].push_back(y);
-        l[y].push_back(x);
+//         l[y].push_back(x);
     }  
     
     //dfs helper
