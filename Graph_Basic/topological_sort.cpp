@@ -22,10 +22,10 @@ class Graph{
         
         visited[src] = true;
         
-        for(auto p :l){
-            T node = p.first;
-            if(!visited[node]){
-                dfs_helper(node,visited,ordering);
+        for(auto nbr :l[src]){
+           
+            if(!visited[nbr]){
+                dfs_helper(nbr,visited,ordering);
             }
         }
         ordering.push_front(src);
