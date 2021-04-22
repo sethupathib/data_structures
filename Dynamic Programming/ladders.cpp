@@ -44,12 +44,27 @@ int ladders1(int n, int k){
 	return dp[n];
 }
 
+int ladders_opt(int n, int k){
+	int dp[100] = {0};
+        dp[0] =1;
+	    dp[1] =1;
+	    for(int i=2;i<=k;i++){
+	    	dp[i]= 2*dp[i-1];
+	    }
+	    	for(int i=k+1;i<=n;i++){
+	    		dp[i] = 2*dp[i-1] -dp[i-k-1];
+	    	}
+	 
+	 return dp[n];
+	 }
+
 
 
 int main(){
 
 int n=4,k=3;
 	// cout<<ladders(n,k,dp);
-	cout<<ladders1(n,k);
+	// cout<<ladders1(n,k);
+	cout<<ladders_opt(n,k);
 	return 0;
 }
