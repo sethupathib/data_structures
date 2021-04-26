@@ -17,7 +17,7 @@ int partition(int *a,int s, int e){
 	int pivot = a[e];
 	int i=s-1;
 	for(int j=s;j<=e-1;j++){
-		if(a[i]<pivot){
+		if(a[j]<pivot){
 			i=i+1;
 			swap(a[i],a[j]);
 
