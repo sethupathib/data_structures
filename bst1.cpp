@@ -327,7 +327,7 @@ BstNode* getSuccessor(BstNode* root, int data)
 		
 		while(ancestor!=current)
 		{
-			if(current->data = ancestor->data)
+			if(current->data < ancestor->data)
 			{
 				successor =  ancestor;
 				ancestor = ancestor->left;
