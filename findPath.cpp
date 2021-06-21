@@ -49,6 +49,7 @@ void findPath(int maze[][20],int n, int x, int y, int path[][20])
      findPath(maze, n, x, y-1, path);
      findPath(maze, n, x+1, y, path);
      findPath(maze, n, x-1, y, path);
+	//when you have explored a path, reset that specific item so that you do not explore the same path again.
     path[x][y]=0;
 }
 
