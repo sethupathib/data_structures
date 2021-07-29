@@ -4,6 +4,29 @@ const int N=100;
 vector<int>gr[N];
 int Par[N];
 
+
+void bfs(int src){
+    
+//   bool visited[] = new bool[N]{0};
+    bool visited[N]={0};
+  queue<int>q;
+  q.push(src);
+  
+  while(!q.empty()){
+      auto node = q.front();
+      q.pop();
+      cout<<node<<" ";
+      for(auto nbr:gr[node]){
+          if(!visited[nbr]){
+              visited[nbr]=true;
+              q.push(nbr);
+          }
+      }
+  }
+    
+    
+}
+
 void dfs(int cur, int par){
     Par[cur]=par;
     cout<<cur<<" ";
@@ -24,6 +47,6 @@ int main(){
         gr[x].push_back(y);
         gr[y].push_back(x);
     }
-    dfs(1,0);
+    bfs(1);
     return 0;
 }
