@@ -32,7 +32,7 @@ public:
           q.pop();
           cout<<node;
           for(auto nbr: l[node]){
-              if(!visited[nbr]){
+              if(!visited[nbr]){ 
                   q.push(nbr);
                   visited[nbr] = true;
               }
