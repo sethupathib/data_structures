@@ -42,7 +42,8 @@ int main()
 int a[10] = {1,2,4,2,3,1};
   int k;
   cin>>k;
-  solve(a,k);
+	int n=sizeof(a)/sizeof(int);
+  solve(a,n,k);
 
 return 0;
 }
